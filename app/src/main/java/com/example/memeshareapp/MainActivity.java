@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     loadmeme();
     }
     private void loadmeme(){
-        // Instantiate the RequestQueue.
         current_url ="https://meme-api.herokuapp.com/gimme";
         // Request a string response from the provided URL.
         loadImage.setVisibility(View.VISIBLE);
@@ -65,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }, error -> Toast.makeText(MainActivity.this,"Something went wrong", Toast.LENGTH_SHORT).show());
-        Volley.newRequestQueue(MainActivity.this).add(jsonObjectRequest);
+        MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
     }
 
     public void shareMeme(View view) {
