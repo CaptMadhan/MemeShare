@@ -20,6 +20,15 @@
         tools:srcCompat="@tools:sample/avatars"
         android:contentDescription="@string/ImageView_Description" />
 
+    <ProgressBar
+        android:id="@+id/imageloader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/memeImageView"
+        app:layout_constraintRight_toRightOf="@+id/memeImageView"
+        app:layout_constraintTop_toTopOf="@+id/memeImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/memeImageView"
+        />
     <Button
         android:id="@+id/shareButton"
         android:layout_width="0dp"
